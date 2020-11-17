@@ -1,4 +1,4 @@
-// import checkNumInputs from './checkNumInputs';
+import {postData} from '../services/requests';
 
 const forms = () => {
   const form = document.querySelectorAll('form'),
@@ -22,13 +22,7 @@ const forms = () => {
     question: 'assets/question.php'
   };
 
-  const postData = async (url, data) => {
-    let result = await fetch(url, {
-      method: "POST",
-      body: data
-    }); //end fetch
-    return await result.text();
-  };
+  //function postData been here
 
   const clearInputs = () => {
     input.forEach(item => {

@@ -845,6 +845,12 @@ h4 {
   background-color: #f7e7e6;
   padding: 9rem 0;
 }
+/*start my class*/
+.feedback-slider {
+  position:relative; 
+  min-height: 400px;
+}
+/*end my class*/
 .feedback-slider-item {
   padding-bottom: 5rem;
 }
