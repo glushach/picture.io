@@ -4845,34 +4845,26 @@ var filter = function filter() {
   }; //end fn typeFilter
 
 
-  btnAll.addEventListener('click', function () {
-    typeFilter(markAll);
-  }); //end event
+  function startEventListenerClick(trigger, content) {
+    if (content) {
+      trigger.addEventListener('click', function () {
+        typeFilter(content);
+      }); //end event
+    } else {
+      trigger.addEventListener('click', function () {
+        typeFilter();
+      }); //end event
+    }
+  } //end fn
 
-  btnLovers.addEventListener('click', function () {
-    typeFilter(markLovers);
-  }); //end event
 
-  btnChef.addEventListener('click', function () {
-    typeFilter(markChef);
-  }); //end event
-
-  btnGuy.addEventListener('click', function () {
-    typeFilter(markGuy);
-  }); //end event
-
-  btnGirl.addEventListener('click', function () {
-    typeFilter(markGirl);
-  }); //end event
-
-  btnGrandmother.addEventListener('click', function () {
-    typeFilter();
-  }); //end event
-
-  btnGranddad.addEventListener('click', function () {
-    typeFilter();
-  }); //end event
-
+  startEventListenerClick(btnAll, markAll);
+  startEventListenerClick(btnLovers, markLovers);
+  startEventListenerClick(btnChef, markChef);
+  startEventListenerClick(btnGuy, markGuy);
+  startEventListenerClick(btnGirl, markGirl);
+  startEventListenerClick(btnGrandmother);
+  startEventListenerClick(btnGranddad);
   menu.addEventListener('click', function (e) {
     var target = e.target;
 

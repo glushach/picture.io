@@ -36,33 +36,26 @@ const filter = () => {
     }
   };//end fn typeFilter
 
-  btnAll.addEventListener('click', () => {
-    typeFilter(markAll);
-  });//end event
+  function startEventListenerClick(trigger, content) {
+    if(content) {
+        trigger.addEventListener('click', () => {
+        typeFilter(content);
+      });//end event
+    } else {
+      trigger.addEventListener('click', () => {
+        typeFilter();
+      });//end event
+    }
+  }//end fn
+  startEventListenerClick(btnAll, markAll);
+  startEventListenerClick(btnLovers, markLovers);
+  startEventListenerClick(btnChef, markChef);
+  startEventListenerClick(btnGuy, markGuy);
+  startEventListenerClick(btnGirl, markGirl);
+  startEventListenerClick(btnGrandmother);
+  startEventListenerClick(btnGranddad);
 
-  btnLovers.addEventListener('click', () => {
-    typeFilter(markLovers);
-  });//end event
 
-  btnChef.addEventListener('click', () => {
-    typeFilter(markChef);
-  });//end event
-
-  btnGuy.addEventListener('click', () => {
-    typeFilter(markGuy);
-  });//end event
-
-  btnGirl.addEventListener('click', () => {
-    typeFilter(markGirl);
-  });//end event
-
-  btnGrandmother.addEventListener('click', () => {
-    typeFilter();
-  });//end event
-
-  btnGranddad.addEventListener('click', () => {
-    typeFilter();
-  });//end event
 
   menu.addEventListener('click', (e) => {
     let target = e.target;
