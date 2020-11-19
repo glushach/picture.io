@@ -194,6 +194,7 @@ h4 {
   padding: 0;
   margin: 0;
   width: 20rem;
+  z-index: 1;
 }
 .header .burger-menu li {
   padding: 2rem;
@@ -208,6 +209,8 @@ h4 {
 .main {
   background-color: #f7e7e6;
   padding-top: 3rem;
+  z-index: -1;
+  position: relative;
   /* Making it beautiful */
 
 }
@@ -922,11 +925,34 @@ h4 {
 .often-questions .accordion-heading span {
   border-bottom: 2px dotted #333;
 }
-.often-questions .accordion-block {
-  margin-top: 1rem;
-  background-color: #f7e7e6;
-  padding: 3rem 4rem;
+
+/*Start my style*/
+.often-questions p.active-style span {
+  color: #E950D7;
+  text-decoration: none;
+  border: 0;
 }
+.often-questions .accordion-heading.active+.accordion-block {
+  display: block;
+}
+.often-questions .accordion-block {
+  background-color: #f7e7e6;
+  max-height: 0;
+  opacity: 0;
+  transform: all 0.3s ease-out;
+  overflow: hidden;
+  /* display: none; */
+  /* margin-top: 1rem; */
+  /* padding: 3rem 4rem; */
+}
+.often-questions .accordion-block.active-content {
+  overflow: visible;
+  opacity: 1;
+  padding: 3rem 4rem;
+  margin-top: 1rem;
+}
+/*End my style*/
+
 .often-questions .accordion-block:before {
   content: '';
   position: absolute;
