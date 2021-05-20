@@ -20,7 +20,7 @@
     "browser-sync": "^2.26.13",
     "core-js": "^3.7.0",
     "gulp": "^4.0.2",
-    "webpack": "^4.41.2",
+    "webpack": "^4.46.0",
     "webpack-stream": "^5.2.1"
   },
   "description": "",
